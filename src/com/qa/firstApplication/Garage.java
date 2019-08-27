@@ -6,9 +6,8 @@ public class Garage {
 	
 	private ArrayList<Vehicle> garage;
 	private int bill;
-	private int acceptedID;
+	
 	public void addVehicle(Vehicle veh){
-	if (Ac)
 		this.garage.add(veh);
 	}
 	
@@ -17,7 +16,7 @@ public class Garage {
 		for (Vehicle v : garage) {
 			
 			if (v instanceof Scooter) {
-				bill = ((Scooter) v).getTopSpeed() * 5;			
+				bill = ((Scooter)v).getTopSpeed() * 5;			
 			}
 			else if (v instanceof MotorBike) {
 				

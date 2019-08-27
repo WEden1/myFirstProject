@@ -13,39 +13,14 @@ public class VehicleMain {
 		int jennyId = jenny.getId();
 		int jennyHp = jenny.getHp();
 		
-//		System.out.println(brumId);
-//		System.out.println(brumWheels);
-//		System.out.println(jennyId);
-//		System.out.println(jennyHp);
+		Scooter scoot = new Scooter(7657, 80);
+		int scootID = scoot.getId();
+		int scootTopSpeed = scoot.getTopSpeed();
 		
-		Vehicle veh1 = (Vehicle) brum;		
-		Vehicle veh2 = (Vehicle) jenny;
-		Vehicle veh3 = (Vehicle) brum;
-		
-		ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
-		
-		vehicles.add(veh1);
-		vehicles.add(veh2);
-		vehicles.add(veh3);
-		
-		Car brumAgain = (Car) vehicles.get(0);
-		MotorBike jennyAgain = (MotorBike) vehicles.get(1);
-		
-		System.out.println("brumAgain wheels: " + brumAgain.getWheels());
-		System.out.println("jennyAgain Hp: " + jennyAgain.getHp());
-
-		for(Vehicle v :vehicles) {
-			
-		if(v instanceof Car)
-		{
-			System.out.println("Wheels: " + ((Car)v).getWheels());
-		}	
-		else if (v instanceof MotorBike)
-		{
-			System.out.println("Hp: " + ((MotorBike)v).getHp());
-		}
-		}
-		
+		Garage garage = new Garage();
+		garage.addVehicle(brum);
+		garage.addVehicle(jenny);
+		garage.addVehicle(scoot);
 		
 	}
 
